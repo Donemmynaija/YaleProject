@@ -119,6 +119,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'auth/static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Media files (Uploaded by users)
+MEDIA_URL = '/image/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'image')
+
+#email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'adeyemie90@gmail.com'
+EMAIL_HOST_PASSWORD = 'fiakhaokryjpkwgx'
+# fiak haok ryjp kwgx
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
