@@ -24,7 +24,9 @@ class RegistrationSerializer(serializers.Serializer):
     
     def validate(self, data):
          if data['password1'] != data['password2']:
-            return serializers.ValidationError("Passwords do not match.")
+            raise serializers.ValidationError("Passwords do not match.")
+         
+         return data
          
         #  if data['email'].exists():
         #    return serializers.ValidationError("Email already in use.")
